@@ -20,19 +20,31 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Row(modifier = Modifier
-                .width(300.dp)
-                .fillMaxHeight(0.7f)
-                .background(Color.Green) ,
-                horizontalArrangement = Arrangement.SpaceAround,
-                 verticalAlignment = Alignment.CenterVertically)
-            {
-                Text(text = "Hello")
-                Text(text = "World")
-                Text(text = "Game")
-            }
+           MyApp()
 
         }
+    }
+    @Composable
+    fun MyApp(){
+        Column(modifier = Modifier
+            .width(300.dp)
+            .fillMaxHeight(0.7f)
+            .background(Color.Green),
+            verticalArrangement = Arrangement.SpaceAround,
+            horizontalAlignment = Alignment.CenterHorizontally
+          )
+        {
+            Text(text = "Hello")
+            Text(text = "World")
+            Text(text = "Game")
+            Text(text = "Rahul")
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun ComposablePreview() {
+        MyApp()
     }
 }
 

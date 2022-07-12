@@ -21,35 +21,47 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           Column(
-               modifier = Modifier
-                   .background(Color.Green)
-                   .fillMaxHeight(0.5f)
-                   .fillMaxWidth()
-                   .border(5.dp,Color.Magenta)
-                   .padding(5.dp)
-                   .border(5.dp,Color.Blue)
-                   .padding(5.dp)
-                   .border(5.dp,Color.Red)
-                   .padding(5.dp)
-
-                   //.requiredWidth(300.dp)
-           ){
-               Text("Hello", modifier = Modifier
-                   .border(5.dp,Color.Yellow)
-                   .padding(5.dp)
-                   .offset(20.dp,20.dp)
-                   .border(10.dp,Color.Black)
-                   .padding(10.dp)
-
-               )
-
-               Spacer(modifier = Modifier.height(50.dp))
-               Text("World" , modifier = Modifier.clickable {
-
-               })
-           }
+            MyApp()
         }
+    }
+
+    @Composable
+    fun MyApp() {
+        Column(
+            modifier = Modifier
+                .background(Color.Green)
+                .fillMaxHeight(0.5f)
+                .fillMaxWidth()
+                .border(5.dp, Color.Magenta)
+                .padding(5.dp)
+                .border(5.dp, Color.Blue)
+                .padding(5.dp)
+                .border(5.dp, Color.Red)
+                .padding(5.dp)
+
+            //.requiredWidth(300.dp)
+        ) {
+            Text(
+                "Hello", modifier = Modifier
+                    .border(5.dp, Color.Yellow)
+                    .padding(5.dp)
+                    .offset(20.dp, 20.dp)
+                    .border(10.dp, Color.Black)
+                    .padding(10.dp)
+
+            )
+
+            Spacer(modifier = Modifier.height(50.dp))
+            Text("World", modifier = Modifier.clickable {
+
+            })
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun Preview(){
+        MyApp()
     }
 }
 
