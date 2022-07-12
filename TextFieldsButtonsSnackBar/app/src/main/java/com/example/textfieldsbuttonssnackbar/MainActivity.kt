@@ -59,6 +59,7 @@ fun Login() {
 
                 }
             },
+                modifier = Modifier.align(Alignment.End)
             ) {
                 Text(text = "Pls Greet Me")
             }
