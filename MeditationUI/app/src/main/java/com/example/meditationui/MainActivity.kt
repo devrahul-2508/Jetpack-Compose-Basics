@@ -19,9 +19,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             MeditationUITheme {
                 // A surface container using the 'background' color from the theme
-              HomeScreen()
+                HomeScreen()
+
+                }
             }
         }
     }
-}
+
+
+
+
 
